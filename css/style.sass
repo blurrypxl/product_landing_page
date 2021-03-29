@@ -1,50 +1,71 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700'
 
 $primaryColor: #FF5500
+$blackColor: #3f3f3f
 
-*, p
+*
     margin: 0
     padding: 0
 
 body
+    // border: 2px solid black
     font-family: 'Lato', sans-serif
 
-.container
-    border: 2px solid blue
+    .main-section
+        // border: 2px solid blue
 
-    .hero-img
-        border: 1px solid red
-        background: url('../images') no-repeat cover
+        .bg-color
+            background-color: $blackColor
 
-    footer
-        border: 1px solid green
-        background-color: $primaryColor
-        display: flex
-        flex-direction: column
-        color: white
-
-        .illustrator-link
-            border: 1px solid yellow
-            padding: 20px 0
+        .hero-img
+            // border: 1px solid red
+            padding: 15%
+            background-image: url('../images/hero-image.jpg')
+            background-repeat: no-repeat
+            background-size: cover
             display: flex
-            justify-content: center
-
-            a
-                color: white
-                font-weight: bold
-
-        .profile-link
-            border: 1px solid violet
-            padding: 10px 0
-            display: flex
-            flex-direction: column
-            align-items: center
-
-            a
-                text-decoration: none
-                color: white
+            justify-content: flex-start
             
-            img
-                max-width: 100%
-                width: 32px
-                height: auto
+            header
+                border-radius: 5px
+                background-color: #30303075
+                box-sizing: content-box
+                padding: 10px
+                color: white
+                text-transform: uppercase
+
+                h1
+                    font-size: 25px
+                
+                p
+                    font-size: 3vw
+
+        footer
+            // border: 1px solid green
+            background-color: $primaryColor
+
+            .illustrator-link
+                // border: 1px solid yellow
+                padding: 20px 0
+                display: flex
+                justify-content: center
+
+                a
+                    color: white
+                    font-weight: bold
+
+            .profile-link
+                // border: 1px solid violet
+                padding: 10px 0
+                display: flex
+                flex-direction: column
+                align-items: center
+
+                a
+                    text-decoration: none
+                    color: white
+
+                img
+                    max-width: 100%
+                    width: 32px
+                    height: auto
