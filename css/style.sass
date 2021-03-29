@@ -1,8 +1,11 @@
+// Import Font dari google
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700'
 
+// Variabel Warna
 $primaryColor: #FF5500
-$blackColor: #3f3f3f
+$blackColor: #1f1f1f
 
+// Menghapus seluruh space halaman
 *
     margin: 0
     padding: 0
@@ -10,53 +13,72 @@ $blackColor: #3f3f3f
 body
     // border: 2px solid black
     font-family: 'Lato', sans-serif
+    
+    // Membuat posisi element body mengisi seluruh space halaman
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
 
     .main-section
         // border: 2px solid blue
+        height: 100%
 
         .bg-color
             background-color: $blackColor
 
         .hero-img
             // border: 1px solid red
-            padding: 15%
+            height: 90%
             background-image: url('../images/hero-image.jpg')
             background-repeat: no-repeat
             background-size: cover
+            background-position: top right
             display: flex
-            justify-content: flex-start
+            align-items: center
             
             header
+                display: flex
+                flex-direction: column
+                align-items: center
                 border-radius: 5px
+                width: 100%
                 background-color: #30303075
-                box-sizing: content-box
-                padding: 10px
+                padding: 2%
                 color: white
                 text-transform: uppercase
 
                 h1
-                    font-size: 25px
+                    font-size: 50px
+                    font-weight: bold
                 
                 p
-                    font-size: 3vw
+                    font-size: inherit
 
         footer
             // border: 1px solid green
-            background-color: $primaryColor
+            background-color: $blackColor
+            padding: 20px 0
 
             .illustrator-link
                 // border: 1px solid yellow
-                padding: 20px 0
+                padding: 5px 0
                 display: flex
                 justify-content: center
+                color: white
 
-                a
+                p 
+                    margin: 0
+                    padding: 0
+
+                a 
                     color: white
                     font-weight: bold
 
             .profile-link
                 // border: 1px solid violet
-                padding: 10px 0
+                padding: 5px 0
                 display: flex
                 flex-direction: column
                 align-items: center
