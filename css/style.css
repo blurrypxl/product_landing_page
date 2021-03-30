@@ -1,11 +1,25 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3a3a3a;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Poppins", Lato, sans-serif;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -19,6 +33,7 @@ body .main-section .bg-color {
   background-color: #1f1f1f;
 }
 body .main-section .hero-img {
+  margin-top: 50px;
   height: 90%;
   background-image: url("../images/hero-image.jpg");
   background-repeat: no-repeat;
@@ -27,7 +42,7 @@ body .main-section .hero-img {
   display: flex;
   align-items: center;
 }
-body .main-section .hero-img header {
+body .main-section .hero-img .hero-text {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,11 +53,11 @@ body .main-section .hero-img header {
   color: white;
   text-transform: uppercase;
 }
-body .main-section .hero-img header h1 {
+body .main-section .hero-img .hero-text h2 {
   font-size: 50px;
   font-weight: bold;
 }
-body .main-section .hero-img header p {
+body .main-section .hero-img .hero-text p {
   font-size: inherit;
 }
 body .main-section footer {
@@ -77,6 +92,12 @@ body .main-section footer .profile-link img {
   max-width: 100%;
   width: 32px;
   height: auto;
+}
+
+@media (max-width: 425px) {
+  body .main-section .hero-img {
+    height: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
