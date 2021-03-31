@@ -20,6 +20,7 @@
 
 body {
   font-family: "Poppins", Lato, sans-serif;
+  background-color: gray;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -44,7 +45,7 @@ body .main-section .logo-position h2 {
   font-weight: bold;
 }
 body .main-section .hero-img {
-  margin-top: 50px;
+  margin-top: 75px;
   height: 50%;
   background-image: url("../images/hero-image.jpg");
   background-repeat: no-repeat;
@@ -70,7 +71,15 @@ body .main-section .hero-img .hero-text h2 {
 body .main-section .hero-img .hero-text p {
   font-size: inherit;
 }
+body .main-section .wives-section {
+  background-color: white;
+}
+body .main-section .wives-section .wives {
+  max-width: 100%;
+  height: auto;
+}
 body .main-section #features-section {
+  background-color: #1f1f1f;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-template-areas: "feature1" "feature2" "feature3" "feature4";
@@ -80,14 +89,17 @@ body .main-section #features-section .f-box {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  box-sizing: border-box;
+  color: white;
 }
 body .main-section #features-section .f-box p {
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  text-align: center;
 }
 body .main-section #features-section .feature-icons {
   max-width: 100%;
-  width: 80px;
+  width: 60px;
   height: auto;
 }
 body .main-section #features-section .feature-box1 {
@@ -103,21 +115,21 @@ body .main-section #features-section .feature-box4 {
   grid-area: feature4;
 }
 body .main-section footer {
-  background-color: #1f1f1f;
+  background-color: white;
   padding: 20px 0;
 }
 body .main-section footer .illustrator-link {
   padding: 5px 0;
   display: flex;
   justify-content: center;
-  color: white;
+  color: #1f1f1f;
 }
 body .main-section footer .illustrator-link p {
   margin: 0;
   padding: 0;
 }
 body .main-section footer .illustrator-link a {
-  color: white;
+  color: #1f1f1f;
   font-weight: bold;
 }
 body .main-section footer .profile-link {
@@ -128,15 +140,38 @@ body .main-section footer .profile-link {
 }
 body .main-section footer .profile-link a {
   text-decoration: none;
-  color: white;
+  color: #1f1f1f;
 }
 body .main-section footer .profile-link img {
   max-width: 100%;
-  width: 32px;
+  width: 30px;
   height: auto;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 1000px) {
+  body .main-section .logo-position h2 {
+    display: block;
+  }
+  body .main-section .hero-img {
+    height: 90%;
+  }
+  body .main-section .hero-img .hero-text {
+    align-items: flex-start;
+  }
+  body .main-section .waves {
+    max-width: 100%;
+    height: auto;
+  }
+  body .main-section #features-section {
+    grid-template-rows: 1fr;
+    grid-template-colums: repeat(auto-fit, 1fr);
+    grid-template-areas: "feature1 feature2 feature3 feature4";
+  }
+  body .main-section #features-section .f-box p {
+    text-align: center;
+  }
+}
+@media (min-width: 425px) and (max-width: 999px) {
   body .main-section .logo-position h2 {
     display: block;
   }

@@ -25,6 +25,7 @@ $blackColor: #1f1f1f
 body
     // border: 2px solid black
     font-family: 'Poppins', Lato, sans-serif
+    background-color: gray
     
     // Membuat posisi element body mengisi seluruh space halaman
     position: absolute
@@ -55,7 +56,7 @@ body
         // Hero-Style-Start
         .hero-img
             // border: 1px solid red
-            margin-top: 50px
+            margin-top: 75px
             height: 50%
             background-image: url('../images/hero-image.jpg')
             background-repeat: no-repeat
@@ -82,9 +83,17 @@ body
                     font-size: inherit
         // Hero-Style-End
         
+        .wives-section
+            background-color: white
+
+            .wives
+                max-width: 100%
+                height: auto
+
         // Features-Style-Start
         #features-section
             // border: 1px solid blue
+            background-color: $blackColor
             display: grid
             grid-template-rows: repeat(4, 1fr)
             grid-template-areas: 'feature1' 'feature2' 'feature3' 'feature4'
@@ -94,14 +103,17 @@ body
                 flex-direction: column
                 align-items: center
                 margin-bottom: 20px 
+                box-sizing: border-box
+                color: white
 
                 p
                     margin: 0
-                    padding: 0
+                    padding: 10px
+                    text-align: center
 
             .feature-icons
                 max-width: 100%
-                width: 80px
+                width: 60px
                 height: auto
 
             .feature-box1
@@ -124,7 +136,7 @@ body
         // Footer-Style-Start
         footer
             // border: 1px solid green
-            background-color: $blackColor
+            background-color: white
             padding: 20px 0
 
             .illustrator-link
@@ -132,14 +144,14 @@ body
                 padding: 5px 0
                 display: flex
                 justify-content: center
-                color: white
+                color: $blackColor
 
                 p 
                     margin: 0
                     padding: 0
 
                 a 
-                    color: white
+                    color: $blackColor
                     font-weight: bold
 
             .profile-link
@@ -151,15 +163,41 @@ body
 
                 a
                     text-decoration: none
-                    color: white
+                    color: $blackColor
 
                 img
                     max-width: 100%
-                    width: 32px
+                    width: 30px
                     height: auto
         // Footer-Style-End
 
-@media (min-width: 425px)
+@media (min-width: 1000px)
+    body
+        .main-section
+            .logo-position
+                h2
+                    display: block
+
+            .hero-img
+                height: 90%
+
+                .hero-text
+                    align-items: flex-start
+
+            .waves
+                max-width: 100%
+                height: auto
+
+            #features-section
+                grid-template-rows: 1fr
+                grid-template-colums: repeat(auto-fit, 1fr)
+                grid-template-areas: 'feature1 feature2 feature3 feature4'
+
+                .f-box
+                    p
+                        text-align: center
+
+@media (min-width: 425px) and (max-width: 999px)
     body
         .main-section
             .logo-position
