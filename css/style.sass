@@ -82,16 +82,48 @@ body
                     font-size: inherit
         // Hero-Style-End
         
-        // About Us-Style-Start
-        #about-section
-            // border: 1px solid red
-            margin: 40px auto
-            padding: 0 20px
-            text-align: center
+        // Booking-Wash-Form-Style-Start
+        #booking-section
+            // border: 1px solid violet
+            height: 50%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
 
             h2
                 font-weight: bold
-        // About Us-Style-End
+            
+            #form
+                // border: 1px solid lightblue
+                width: 90%
+                box-sizing: border-box
+
+                span
+                    color: red
+
+                #email
+                    width: 100%
+                    height: 40px
+                    padding: 0 10px
+
+                .submit-box
+                    display: flex
+                    justify-content: center
+
+                    #submit
+                        border: none
+                        border-radius: 5px
+                        width: 100%
+                        height: 40px
+                        text-align: center
+                        background-color: $blackColor
+                        color: white
+                
+                    #submit:hover
+                        background-color: #353535
+                
+        // Booking-Wash-Form-Style-End
 
         // Wives-Style-Start
         .wives-section
@@ -180,19 +212,33 @@ body
                     width: 460px
                     height: auto
 
+                h2
+                    margin: 10px 0
+
                 h2, p
                     padding: 0 10px
 
             .pricing-box-1
                 grid-area: pricing1
+
             .pricing-box-2
                 grid-area: pricing2
+                
             .pricing-box-3
                 grid-area: pricing3
         // Pricing-Style-End
 
-        // Booking-Wash-Form-Style-Start
-        // Booking-Wash-Form-Style-End
+        // About Us-Style-Start
+        #about-section
+            // border: 1px solid red
+            margin: 40px auto
+            padding: 0 20px
+            height: 30%
+            text-align: center
+
+            h2
+                font-weight: bold
+        // About Us-Style-End
         
         // Footer-Style-Start
         footer
@@ -232,7 +278,6 @@ body
 
                 img
                     max-width: 100%
-                    width: 30px
                     height: auto
         // Footer-Style-End
 
@@ -253,10 +298,13 @@ body
                 max-width: 100%
                 height: auto
 
-            #about-section
-                display: flex
-                flex-direction: column
-                width: 50%
+            #booking-section
+                #form
+                    width: 60%
+
+                    .submit-box
+                        #submit
+                            width: 150px
 
             #features-section
                 grid-template-rows: auto
@@ -268,15 +316,24 @@ body
                         text-align: center
 
             #pricing-section
+                padding: 20px 
                 grid-template-rows: 1fr
                 grid-template-columns: repeat(3, 1fr)
                 grid-template-areas: 'pricing1 pricing2 pricing3'
                 grid-row-gap: 0
-                // grid-column-gap: 10px
+                grid-column-gap: 20px
 
                 .pricing-box
                     h2,p
                         padding: 0 20px
+
+            #about-section
+                display: flex
+                flex-direction: column
+                width: 50%
+
+                p
+                    text-align: justify
 
 @media (min-width: 425px) and (max-width: 999px)
     body
@@ -290,6 +347,10 @@ body
 
                 .hero-text
                     align-items: flex-start
+
+            #booking-section
+                #form
+                    width: 70%
 
             #pricing-section
                 .pricing-box

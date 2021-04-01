@@ -70,13 +70,43 @@ body .main-section .hero-img .hero-text h2 {
 body .main-section .hero-img .hero-text p {
   font-size: inherit;
 }
-body .main-section #about-section {
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: center;
+body .main-section #booking-section {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-body .main-section #about-section h2 {
+body .main-section #booking-section h2 {
   font-weight: bold;
+}
+body .main-section #booking-section #form {
+  width: 90%;
+  box-sizing: border-box;
+}
+body .main-section #booking-section #form span {
+  color: red;
+}
+body .main-section #booking-section #form #email {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+}
+body .main-section #booking-section #form .submit-box {
+  display: flex;
+  justify-content: center;
+}
+body .main-section #booking-section #form .submit-box #submit {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background-color: #1f1f1f;
+  color: white;
+}
+body .main-section #booking-section #form .submit-box #submit:hover {
+  background-color: #353535;
 }
 body .main-section .wives-section {
   background-color: white;
@@ -153,6 +183,9 @@ body .main-section #pricing-section .pricing-box img {
   width: 460px;
   height: auto;
 }
+body .main-section #pricing-section .pricing-box h2 {
+  margin: 10px 0;
+}
 body .main-section #pricing-section .pricing-box h2, body .main-section #pricing-section .pricing-box p {
   padding: 0 10px;
 }
@@ -164,6 +197,15 @@ body .main-section #pricing-section .pricing-box-2 {
 }
 body .main-section #pricing-section .pricing-box-3 {
   grid-area: pricing3;
+}
+body .main-section #about-section {
+  margin: 40px auto;
+  padding: 0 20px;
+  height: 30%;
+  text-align: center;
+}
+body .main-section #about-section h2 {
+  font-weight: bold;
 }
 body .main-section footer {
   border-top: 1px solid #acacac;
@@ -199,7 +241,6 @@ body .main-section footer .profile-link a {
 }
 body .main-section footer .profile-link img {
   max-width: 100%;
-  width: 30px;
   height: auto;
 }
 
@@ -217,10 +258,11 @@ body .main-section footer .profile-link img {
     max-width: 100%;
     height: auto;
   }
-  body .main-section #about-section {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+  body .main-section #booking-section #form {
+    width: 60%;
+  }
+  body .main-section #booking-section #form .submit-box #submit {
+    width: 150px;
   }
   body .main-section #features-section {
     grid-template-rows: auto;
@@ -231,13 +273,23 @@ body .main-section footer .profile-link img {
     text-align: center;
   }
   body .main-section #pricing-section {
+    padding: 20px;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "pricing1 pricing2 pricing3";
     grid-row-gap: 0;
+    grid-column-gap: 20px;
   }
   body .main-section #pricing-section .pricing-box h2, body .main-section #pricing-section .pricing-box p {
     padding: 0 20px;
+  }
+  body .main-section #about-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  body .main-section #about-section p {
+    text-align: justify;
   }
 }
 @media (min-width: 425px) and (max-width: 999px) {
@@ -249,6 +301,9 @@ body .main-section footer .profile-link img {
   }
   body .main-section .hero-img .hero-text {
     align-items: flex-start;
+  }
+  body .main-section #booking-section #form {
+    width: 70%;
   }
   body .main-section #pricing-section .pricing-box h2, body .main-section #pricing-section .pricing-box p {
     padding: 0 40px;
