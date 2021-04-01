@@ -134,12 +134,44 @@ body .main-section #video-section #video {
   max-width: 620px;
   width: 100%;
 }
+body .main-section #pricing-section {
+  background-color: #1f1f1f;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "pricing1" "pricing2" "pricing3";
+  grid-row-gap: 10px;
+}
+body .main-section #pricing-section .pricing-box {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+body .main-section #pricing-section .pricing-box img {
+  max-width: 100%;
+  width: 460px;
+  height: auto;
+}
+body .main-section #pricing-section .pricing-box h2, body .main-section #pricing-section .pricing-box p {
+  padding: 0 10px;
+}
+body .main-section #pricing-section .pricing-box-1 {
+  grid-area: pricing1;
+}
+body .main-section #pricing-section .pricing-box-2 {
+  grid-area: pricing2;
+}
+body .main-section #pricing-section .pricing-box-3 {
+  grid-area: pricing3;
+}
 body .main-section footer {
   border-top: 1px solid #acacac;
   background-color: white;
   width: 90%;
   padding: 20px 0;
   margin: 0 auto;
+  margin-top: 20px;
 }
 body .main-section footer .illustrator-link {
   padding: 5px 0;
@@ -198,6 +230,15 @@ body .main-section footer .profile-link img {
   body .main-section #features-section .f-box p {
     text-align: center;
   }
+  body .main-section #pricing-section {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "pricing1 pricing2 pricing3";
+    grid-row-gap: 0;
+  }
+  body .main-section #pricing-section .pricing-box h2, body .main-section #pricing-section .pricing-box p {
+    padding: 0 20px;
+  }
 }
 @media (min-width: 425px) and (max-width: 999px) {
   body .main-section .logo-position h2 {
@@ -208,6 +249,9 @@ body .main-section footer .profile-link img {
   }
   body .main-section .hero-img .hero-text {
     align-items: flex-start;
+  }
+  body .main-section #pricing-section .pricing-box h2, body .main-section #pricing-section .pricing-box p {
+    padding: 0 40px;
   }
 }
 
